@@ -3,6 +3,11 @@ import LogoFull from "../../public/logo-full.png";
 import BookingIllustration from '../../public/booking-illustration.png';
 import BookingIllustrationBg from "../../public/booking-illustration-bg.png";
 import { RiWhatsappFill } from "react-icons/ri";
+import { FaGear } from "react-icons/fa6";
+import { BsGear } from "react-icons/bs";
+import { MdOutlineCalendarMonth } from "react-icons/md";
+import { GiReceiveMoney } from "react-icons/gi";
+import { GrMoney } from "react-icons/gr";
 
 export default function Home() {
   return (
@@ -34,14 +39,25 @@ export default function Home() {
       </section>
 
       <section>
-        <p className="text-3xl font-bold text-center px-7 py-9 pb-8 md:pt-16 md:text-5xl md:leading-[86px] lg:text-[70px] lg:leading-[86px]">Buat website reservasi anda hanya dengan 3 langkah.</p>
-        <div className="grid grid-cols-1 px-2 py-4 gap-4">
-          <div>
-            <p className="text-lg">Pilih & Kustomisasi Tema</p>
+        <p className="text-3xl font-bold text-center px-7 py-9 pb-8 md:pt-16 md:text-5xl md:leading-[86px] lg:text-[70px] lg:leading-[86px]">
+          Punyai website reservasi anda hanya dengan 3 langkah.
+        </p>
+        <div className="grid grid-cols-1 px-2 py-4 gap-10">
+          <div className="flex flex-col justify-center items-center text-center px-10">
+            <span><BsGear className="text-6xl" /></span>
+            <p className="text-xl mb-2 mt-5 font-bold">Pilih & Kustomisasi Tema</p>
             <p className="text-base">Sesuaikan desain situs booking Anda dengan berbagai pilihan tema. Tidak perlu pengalaman desain atau keterampilan pemrograman.</p>
           </div>
-          <div>02</div>
-          <div>03</div>
+          <div className="flex flex-col justify-center items-center text-center px-10">
+            <span><MdOutlineCalendarMonth className="text-6xl" /></span>
+            <p className="text-xl mb-2 mt-5 font-bold">Tambahkan Jadwal Lapangan</p>
+            <p className="text-base">Tambahkan jadwal lapangan Anda. Tampilkan dengan foto terbaik, harga, dan deskripsi.</p>
+          </div>
+          <div className="flex flex-col justify-center items-center text-center px-10">
+            <span><GrMoney className="text-6xl" /></span>
+            <p className="text-xl mb-2 mt-5 font-bold">Mulai Terima Booking</p>
+            <p className="text-base">Atur metode pembayaran dan mulai terima booking.</p>
+          </div>
         </div>
       </section>
     </main>
