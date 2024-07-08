@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/2048-in-react",
+  basePath: "",
   output: "export",
   reactStrictMode: true,
+  images: { unoptimized: true }
 };
 
 export default nextConfig;
