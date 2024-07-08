@@ -7,6 +7,7 @@ import { MdOutlineCalendarMonth } from "react-icons/md";
 import { GrMoney } from "react-icons/gr";
 import { HiOutlineCursorClick } from "react-icons/hi";
 import UserEmailForm from "./form";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -51,7 +52,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full mb-[150px] lg:px-[200px]">
+      <section className="w-full mb-[150px] md:px-[50px] lg:px-[100px] xl:px-[200px]">
         <p className="text-3xl font-bold text-center px-7 py-9 pb-11 md:pt-16 md:text-5xl md:leading-[86px] lg:text-[70px] lg:leading-[86px]">
           Punyai website reservasi anda hanya dengan 3 langkah.
         </p>
@@ -73,9 +74,19 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full h-[1px] bg-slate-400 mt-5"></div>
-        <div className="flex justify-center items-center px-20 h-96 md:px-52">
-          <p className="text-xl text-center font-bold">“Neema adalah platform pertama di Dunia yang membuat aplikasi reservasi dengan invovasi yang unik dan berbeda dari yang lain.”</p>
+        <div className="flex flex-col justify-center items-center px-20 min-h-96 md:px-52">
+          <p className="text-xl text-center font-bold mb-5">Neema selalu mendengarkan pelanggannya dan berusaha melakukan segala kemungkinan untuk membantu mereka mencapai kebutuhan mereka.”</p>
+          <a
+            href="https://api.whatsapp.com/send/?phone=62087880335189&text='Hi Neema!, Saya ingin memberikan feedback. Menurut saya..'"
+            target="_blank"
+            className="bg-green-500 rounded-full text-white py-3 px-3 flex flex-row justify-center items-center gap-2 md:w-[300px] md:m-0"
+          >
+            <RiWhatsappFill className="text-lg" />
+            <span className="text-base leading-4">Hubungi Kami</span>
+          </a>
         </div>
+
+
       </section>
 
     </main>
