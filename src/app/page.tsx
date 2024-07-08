@@ -34,8 +34,8 @@ export default function Home() {
       </section>
 
       <section>
-        <p>Buat website reservasi anda hanya dengan 3 langkah.</p>
-        <div className="grid grid-cols-3">
+        <p className="text-3xl font-bold text-center px-7 py-9 pb-8 md:pt-16 md:text-5xl md:leading-[86px] lg:text-[70px] lg:leading-[86px]">Buat website reservasi anda hanya dengan 3 langkah.</p>
+        <div className="grid grid-cols-1 px-2 py-4 gap-4">
           <div>
             <p className="text-lg">Pilih & Kustomisasi Tema</p>
             <p className="text-base">Sesuaikan desain situs booking Anda dengan berbagai pilihan tema. Tidak perlu pengalaman desain atau keterampilan pemrograman.</p>
