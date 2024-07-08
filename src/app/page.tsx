@@ -32,6 +32,18 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section>
+        <p>Buat website reservasi anda hanya dengan 3 langkah.</p>
+        <div className="grid grid-cols-3">
+          <div>
+            <p className="text-lg">Pilih & Kustomisasi Tema</p>
+            <p className="text-base">Sesuaikan desain situs booking Anda dengan berbagai pilihan tema. Tidak perlu pengalaman desain atau keterampilan pemrograman.</p>
+          </div>
+          <div>02</div>
+          <div>03</div>
+        </div>
+      </section>
     </main>
   );
 }
