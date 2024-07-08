@@ -3,11 +3,9 @@ import LogoFull from "../../public/logo-full.png";
 import BookingIllustration from '../../public/booking-illustration.png';
 import BookingIllustrationBg from "../../public/booking-illustration-bg.png";
 import { RiWhatsappFill } from "react-icons/ri";
-import { FaGear } from "react-icons/fa6";
-import { BsGear } from "react-icons/bs";
 import { MdOutlineCalendarMonth } from "react-icons/md";
-import { GiReceiveMoney } from "react-icons/gi";
 import { GrMoney } from "react-icons/gr";
+import { HiOutlineCursorClick } from "react-icons/hi";
 
 export default function Home() {
   return (
@@ -38,28 +36,33 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
-        <p className="text-3xl font-bold text-center px-7 py-9 pb-8 md:pt-16 md:text-5xl md:leading-[86px] lg:text-[70px] lg:leading-[86px]">
+      <section className="w-full mb-[150px] lg:px-[200px]">
+        <p className="text-3xl font-bold text-center px-7 py-9 pb-11 md:pt-16 md:text-5xl md:leading-[86px] lg:text-[70px] lg:leading-[86px]">
           Punyai website reservasi anda hanya dengan 3 langkah.
         </p>
-        <div className="grid grid-cols-1 px-2 py-4 gap-10">
-          <div className="flex flex-col justify-center items-center text-center px-10">
-            <span><BsGear className="text-6xl" /></span>
-            <p className="text-xl mb-2 mt-5 font-bold">Pilih & Kustomisasi Tema</p>
-            <p className="text-base">Sesuaikan desain situs booking Anda dengan berbagai pilihan tema. Tidak perlu pengalaman desain atau keterampilan pemrograman.</p>
+        <div className="grid grid-cols-1 py-4 px-5 gap-10 md:px-0 md:grid-cols-3 md:grid-row-3">
+          <div className="flex flex-col items-left">
+            <span className="w-full h-16"><HiOutlineCursorClick className="text-6xl" /></span>
+            <p className="w-full text-xl mb-2 mt-5 font-bold">① Registrasi & Kustomisasi Tema</p>
+            <p className="text-base">Sesuaikan desain situs reservasi Anda dengan berbagai pilihan tema. <br /> Tidak perlu pengalaman desain atau keterampilan pemrograman.</p>
           </div>
-          <div className="flex flex-col justify-center items-center text-center px-10">
-            <span><MdOutlineCalendarMonth className="text-6xl" /></span>
-            <p className="text-xl mb-2 mt-5 font-bold">Tambahkan Jadwal Lapangan</p>
-            <p className="text-base">Tambahkan jadwal lapangan Anda. Tampilkan dengan foto terbaik, harga, dan deskripsi.</p>
+          <div className="flex flex-col items-left">
+            <span className="w-full h-16"><MdOutlineCalendarMonth className="text-6xl" /></span>
+            <p className="w-full text-xl mb-2 mt-5 font-bold">② Tambahkan Jadwal</p>
+            <p className="text-base">Tambahkan jadwal yang anda punya. <br /> Tampilkan dengan <b>foto terbaik, harga, dan deskripsi</b>.</p>
           </div>
-          <div className="flex flex-col justify-center items-center text-center px-10">
-            <span><GrMoney className="text-6xl" /></span>
-            <p className="text-xl mb-2 mt-5 font-bold">Mulai Terima Booking</p>
+          <div className="flex flex-col items-left">
+            <span className="w-full h-16"><GrMoney className="text-6xl" /></span>
+            <p className="w-full text-xl mb-2 mt-5 font-bold">③ Mulai Terima Reservasi</p>
             <p className="text-base">Atur metode pembayaran dan mulai terima booking.</p>
           </div>
         </div>
+        <div className="w-full h-[1px] bg-slate-400 mt-5"></div>
+        <div className="flex justify-center items-center px-20 h-96 md:px-52">
+          <p className="text-xl text-center font-bold">“Neema adalah platform pertama di Dunia yang membuat aplikasi reservasi dengan invovasi yang unik dan berbeda dari yang lain.”</p>
+        </div>
       </section>
+
     </main>
   );
 }
