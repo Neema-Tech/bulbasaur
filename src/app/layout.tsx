@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Neema",
-  description: "Your Booking Solutions!",
+  title: "Neema - Aplikasi Reservasi Pribadi",
+  description: "Mau punya aplikasi reservasi pribadi? Daftar beta sekarang dengan Neema!",
 };
 
 export default function RootLayout({
