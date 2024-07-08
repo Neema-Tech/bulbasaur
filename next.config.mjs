@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/bulbasaur",
+  basePath: "",
   output: "export",
   reactStrictMode: true,
   images: { unoptimized: true }
