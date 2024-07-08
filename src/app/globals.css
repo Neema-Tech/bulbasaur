@@ -8,21 +8,21 @@
 
 @font-face {
   font-family: 'Nexa';
-  src: url('/fonts/Nexa%20Regular.otf') format('opentype');
+  src: url('/fonts/nexa-regular.woff2') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Nexa';
-  src: url('/fonts/Nexa%20Bold.otf') format('opentype');
+  src: url('/fonts/nexa-bold.woff2') format('opentype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Nexa';
-  src: url('/fonts/Nexa%20Light.otf') format('opentype');
+  src: url('/fonts/nexa-light.woff2') format('opentype');
   font-weight: 300;
   font-style: normal;
 }
