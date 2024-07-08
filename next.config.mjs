@@ -5,7 +5,7 @@ const nextConfig = {
   basePath: isDevelopment ? "" : "/bulbasaur",
   output: "export",
   reactStrictMode: true,
-  images: { unoptimized: true }
+  images: { unoptimized: true },
 };
 
 export default nextConfig;
