@@ -22,11 +22,11 @@ export default function Home() {
             height={150}
           />
         </div>
-        <p className="text-3xl font-bold text-center px-7 py-9 pb-8 md:pt-16 md:text-5xl md:leading-[86px] lg:text-[70px] lg:leading-[86px]">
+        <p className="text-3xl font-bold text-center px-7 py-9 pb-8 md:pt-16 md:text-5xl md:leading-[75px] lg:text-[70px] lg:leading-[86px]">
           Mau punya aplikasi <br /> reservasi pribadi?
         </p>
         <div
-          className="flex flex-col justify-center items-center mt-5 w-full h-full bg-no-repeat bg-cover bg-center pb-16 md:h-[600px]"
+          className="flex flex-col justify-center items-center w-full h-full bg-no-repeat bg-cover bg-center pb-24 md:h-[600px]"
           style={{ backgroundImage: `url(${BookingIllustrationBg.src})` }}
         >
           <div className="w-full h-full max-w-[550px] relative flex justify-center items-center md:max-w-[800px]">
@@ -41,7 +41,7 @@ export default function Home() {
           <div className="flex flex-col w-full px-6 md:flex-row md:justify-center md:items-center md:gap-3 md:max-w-[900px]">
             <UserEmailForm />
             <a
-              href="https://api.whatsapp.com/send/?phone=62087880335189&text='Hi Neema!, Saya ingin bertanya. '"
+              href="https://api.whatsapp.com/send/?phone=62087880335189&text=Hi Neema!, Saya ingin bertanya, "
               target="_blank"
               className="bg-green-500 rounded-full text-white py-2 px-3 mt-4 flex flex-row justify-center items-center gap-2 border-white border-8 md:w-[300px] md:m-0"
             >
@@ -53,8 +53,8 @@ export default function Home() {
       </section>
 
       <section className="w-full mb-[150px] md:px-[50px] lg:px-[100px] xl:px-[200px]">
-        <p className="text-3xl font-bold text-center px-7 py-9 pb-11 md:pt-16 md:text-5xl md:leading-[86px] lg:text-[70px] lg:leading-[86px]">
-          Punyai website reservasi anda hanya dengan 3 langkah.
+        <p className="text-3xl font-bold text-center px-7 py-9 pb-11 md:pt-16 md:text-5xl md:leading-[75px] lg:text-[70px] lg:leading-[86px]">
+          Punyai website pribadi untuk reservasi hanya dengan 3 langkah.
         </p>
         <div className="grid grid-cols-1 py-4 px-5 gap-10 md:px-0 md:grid-cols-3 md:grid-row-3">
           <div className="flex flex-col items-left">
@@ -75,9 +75,9 @@ export default function Home() {
         </div>
         <div className="w-full h-[1px] bg-slate-400 mt-5"></div>
         <div className="flex flex-col justify-center items-center px-20 min-h-96 md:px-52">
-          <p className="text-xl text-center font-bold mb-5">Neema selalu mendengarkan pelanggannya dan berusaha melakukan segala kemungkinan untuk membantu mereka mencapai kebutuhan mereka.”</p>
+          <p className="text-xl text-center font-bold mb-5">“Neema selalu mendengarkan pelanggannya dan berusaha melakukan segala kemungkinan untuk membantu mereka mencapai kebutuhan mereka.”</p>
           <a
-            href="https://api.whatsapp.com/send/?phone=62087880335189&text='Hi Neema!, Saya ingin memberikan feedback. Menurut saya..'"
+            href="https://api.whatsapp.com/send/?phone=62087880335189&text=Hi Neema!, Saya ingin memberikan feedback. Menurut saya.."
             target="_blank"
             className="bg-green-500 rounded-full text-white py-3 px-3 flex flex-row justify-center items-center gap-2 md:w-[300px] md:m-0"
           >
