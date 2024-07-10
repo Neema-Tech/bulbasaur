@@ -22,9 +22,9 @@ export default function Home() {
             height={150}
           />
         </div>
-        <p className="text-3xl font-bold text-center px-7 py-9 pb-8 md:pt-16 md:text-5xl md:leading-[75px] lg:text-[70px] lg:leading-[86px]">
+        <h1 className="text-3xl font-bold text-center px-7 py-9 pb-8 md:pt-16 md:text-5xl md:leading-[75px] lg:text-[70px] lg:leading-[86px]">
           Mau punya aplikasi <br /> reservasi pribadi?
-        </p>
+        </h1>
         <div
           className="flex flex-col justify-center items-center w-full h-full bg-no-repeat bg-cover bg-center pb-24 md:h-[600px]"
           style={{ backgroundImage: `url(${BookingIllustrationBg.src})` }}
@@ -53,9 +53,9 @@ export default function Home() {
       </section>
 
       <section className="w-full mb-[150px] md:px-[50px] lg:px-[100px] xl:px-[200px]">
-        <p className="text-3xl font-bold text-center px-7 py-9 pb-11 md:pt-16 md:text-5xl md:leading-[75px] lg:text-[70px] lg:leading-[86px]">
+        <h2 className="text-3xl font-bold text-center px-7 py-9 pb-11 md:pt-16 md:text-5xl md:leading-[75px] lg:text-[70px] lg:leading-[86px]">
           Punyai website pribadi untuk reservasi hanya dengan 3 langkah.
-        </p>
+        </h2>
         <div className="grid grid-cols-1 py-4 px-5 gap-10 md:px-0 md:grid-cols-3 md:grid-row-3">
           <div className="flex flex-col items-left">
             <span className="w-full h-16"><HiOutlineCursorClick className="text-6xl" /></span>

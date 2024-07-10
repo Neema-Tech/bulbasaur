@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Neema - Aplikasi Reservasi Pribadi",
-  description: "Mau punya aplikasi reservasi pribadi? Daftar beta sekarang dengan Neema! Neema membantu pemilik bisnis di Indonesia mengelola pemesanan reservasi dengan mudah. Buat situs reservasi Anda sendiri dalam tiga langkah sederhana.",
+  description: "Neema adalah platform yang dirancang untuk para pemilik bisnis untuk membuat situs web reservasi khusus untuk bisnis mereka sendiri",
 };
 
 export default function RootLayout({
