@@ -9,6 +9,24 @@ export const metadata: Metadata = {
   description: "Neema adalah platform yang dirancang untuk para pemilik bisnis untuk membuat situs web reservasi khusus untuk bisnis mereka sendiri",
 };
 
+export const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Neema",
+  "url": "https://neema.id/",
+  // "logo": "https://neema.id/logo.png",
+  // "sameAs": [
+    // "https://www.facebook.com/your-profile",
+    // "https://www.twitter.com/your-profile",
+    // "https://www.instagram.com/your-profile"
+  // ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+62-878-8033-5189",
+    "contactType": "Customer Service"
+  }
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -34,6 +52,11 @@ export default function RootLayout({
         <meta name="twitter:description" content={metadata.description as string} />
         <meta name="twitter:image" content="/logo-full.png" />
         <link rel="canonical" href="https://neema.id/" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
