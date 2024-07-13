@@ -1,0 +1,16 @@
+{
+  "navigation": {
+    "home": "Rumah",
+    "about": "Tentang"
+  },
+  "page": {
+    "home": {
+      "title": "Selamat Datang ke i18n",
+      "description": "Internationalization in NextJs 13 App router"
+    },
+    "about": {
+      "title": "About Kita",
+      "description": "This is the about page"
+    }
+  }
+}

@@ -1,107 +1,49 @@
+"use server"
+
 import Image from "next/image";
-import LogoFull from "../../public/logo-full.png";
-import BookingIllustration from "../../public/booking-illustration.png";
-import BookingIllustrationBg from "../../public/booking-illustration-bg.png";
 import { RiWhatsappFill } from "react-icons/ri";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import { GrMoney } from "react-icons/gr";
 import { HiOutlineCursorClick } from "react-icons/hi";
-import UserEmailForm from "./form";
-import Link from "next/link";
-import Dropdown from "@/components/Dropdown";
+import UserEmailForm from "./components/form";
+import { PageParams } from "@/types";
+import { getDictionary } from "@/lib/dictionary";
+import { i18n } from "@/i18n.config";
 
-export default function Home() {
+interface HomePropsI extends PageParams{
+}
+
+export async function generateStaticParams() {
+  return i18n.locales.map(locale => ({ lang: locale }))
+}
+
+export default async function Home({ params: { lang }}: HomePropsI) {
+  const { page } = await getDictionary(lang);
   return (
     <main className="w-screen h-screen md:h-full font-nexa">
-      <header className="h-20">
-        <nav className="relative px-2 py-4">
-          <div className="container mx-auto flex justify-between items-center">
-            <div className="w-[150px]">
-              <Image
-                src={LogoFull.src}
-                className="h-full w-full object-contain"
-                alt="Neema Logo"
-                width={150}
-                height={60}
-              />
-            </div>
-
-            <div className="flex justify-between items-center md:gap-10">
-              <ul className="hidden md:flex space-x-6 font-bold">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <Dropdown name="Our Products" contents={[
-                  {
-                    name: 'Software Reservation',
-                    href: '#',
-                  },
-                  {
-                    name: 'Custom Website Integration',
-                    href: '#',
-                  }
-                ]}
-                  href={"#"}
-                />
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Contact Us</a></li>
-              </ul>
-
-              <a href="#" className="bg-red-400 py-2 rounded-3xl hover:bg-red-500 text-white hidden md:flex" role="button">Sign In</a>
-            </div>
-
-            <button id="mobile-icon" className="md:hidden">
-              <i className="">=</i>
-            </button>
-
-          </div>
-
-          <div className="md:hidden flex justify-center mt-3 w-full">
-            <div id="mobile-menu" className="mobile-menu absolute top-23 w-full">
-              <ul className="bg-gray-100 shadow-lg leading-9 font-bold h-screen">
-                <li className="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4"><a href="https://google.com" className="block pl-7">Home</a></li>
-                <li className="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4"><a href="#" className="block pl-7">News</a></li>
-                <li className="border-b-2 border-white hover:bg-red-400 hover:text-white">
-                  <a href="#" className="block pl-11">Services <i className="fa-solid fa-chevron-down fa-2xs pt-4"></i></a>
-
-                  <ul className="bg-white text-gray-800 w-full">
-                    <li className="text-sm leading-8 font-normal hover:bg-slate-200"><a className="block pl-16" href="#">Webdesign</a></li>
-                    <li className="text-sm leading-8 font-normal hover:bg-slate-200"><a className="block pl-16" href="#">Digital marketing</a></li>
-                    <li className="text-sm leading-8 font-normal hover:bg-slate-200"><a className="block pl-16" href="#">SEO</a></li>
-                    <li className="text-sm leading-8 font-normal hover:bg-slate-200"><a className="block pl-16" href="#">Ad campaigns</a></li>
-                    <li className="text-sm leading-8 font-normal hover:bg-slate-200"><a className="block pl-16" href="#">UX Design</a></li>
-                  </ul>
-                </li>
-                <li className="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4"><a href="#" className="block pl-7">About</a></li>
-                <li className="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4"><a href="#" className="block pl-7">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-
-        </nav>
-      </header>
-
 
       <section className="flex flex-col w-full h-full flex-column items-center pt-10 mt-10">
         <div className="w-full max-w-[200px] mb-5 md:w-[300px]">
           <Image
-            src={LogoFull.src}
+            src={"/images/logo-full.png"}
             className="h-full w-full object-contain"
             alt="Neema Logo"
             width={300}
             height={150}
           />
         </div>
+        <h1>{page.home.title}</h1>
         <h1 className="text-3xl font-bold text-center px-7 py-9 pb-8 md:pt-16 md:text-5xl md:leading-[75px] lg:text-[70px] lg:leading-[86px]">
           Mau punya aplikasi <br /> reservasi pribadi?
         </h1>
         <div
           className="flex flex-col justify-center items-center w-full h-full bg-no-repeat bg-cover bg-center pb-24 md:h-[600px]"
-          style={{ backgroundImage: `url(${BookingIllustrationBg.src})` }}
+          style={{ backgroundImage: `url("/images/booking-illustration-bg.png")` }}
         >
           <div className="w-full h-full max-w-[550px] relative flex justify-center items-center md:max-w-[800px]">
             <Image
               className="w-full h-full object-contain absolute right-4 bottom-11 md:bottom-[20%]"
-              src={BookingIllustration.src}
+              src="/images/booking-illustration.png"
               width={400}
               height={400}
               alt={"booking-illustration"}

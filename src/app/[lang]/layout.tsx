@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { phoneNumber } from "@/constant";
+import { PageParams } from "@/types";
+import { i18n } from "@/i18n.config";
+import Header from "./components/Header";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Neema - Aplikasi Reservasi Pribadi",
@@ -17,9 +19,9 @@ export const structuredData = {
   "url": "https://neema.id/",
   // "logo": "https://neema.id/logo.png",
   // "sameAs": [
-    // "https://www.facebook.com/your-profile",
-    // "https://www.twitter.com/your-profile",
-    // "https://www.instagram.com/your-profile"
+  // "https://www.facebook.com/your-profile",
+  // "https://www.twitter.com/your-profile",
+  // "https://www.instagram.com/your-profile"
   // ],
   "contactPoint": {
     "@type": "ContactPoint",
@@ -28,13 +30,13 @@ export const structuredData = {
   }
 };
 
-export default function RootLayout({
-  children,
+export default async function RootLayout({
+  children, params
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+} & PageParams>) {
   return (
-    <html lang="en">
+    <html lang={params.lang}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -59,7 +61,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body>
+        <Header lang={params.lang} />
+        {children}
+      </body>
     </html>
   );
 }
