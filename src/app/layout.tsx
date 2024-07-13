@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { phoneNumber } from "@/constant";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,7 @@ export const structuredData = {
   // ],
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+62-878-8033-5189",
+    "telephone": phoneNumber,
     "contactType": "Customer Service"
   }
 };
