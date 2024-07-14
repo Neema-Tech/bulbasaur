@@ -35,7 +35,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 } & PageParams>) {
   return (
-    <html>
+    <html className="scroll-smooth">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -59,8 +59,13 @@ export default async function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
       </head>
-      <body>
+      <body className="transition-all">
         <Header />
         {children}
       </body>

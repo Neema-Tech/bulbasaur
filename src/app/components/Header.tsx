@@ -8,22 +8,24 @@ import MobileHeader from "./MobileHeader";
 export default async function Header() {
 
   return (
-    <header className="h-20">
-      <nav className="relative px-2 py-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="w-[150px]">
+    <header className="relative h-20 w-full flex justify-center">
+      <nav className="container fixed w-full h-20 hidden bg-white md:block">
+        <div className="w-full h-full flex justify-between items-center px-10">
+          <div className="w-[150px] h-full">
             <Image
               src="/images/logo-full.png"
               className="h-full w-full object-contain"
               alt="Neema Logo"
-              width={150}
+              width={100}
               height={60}
             />
           </div>
-          <div className="flex justify-between items-center md:gap-10">
-            <ul className="hidden md:flex space-x-6 font-bold">
-              <li><Link href="/">Home</Link></li>
-              <li><Link href="/about">About</Link></li>
+          <div className="flex justify-between items-center h-full">
+            <ul className="hidden md:flex space-x-16 font-bold tracking-wide">
+              <li><Link href="#" scroll={false}>Home</Link></li>
+              <li><Link href="#about" scroll={true}>About Us</Link></li>
+              <li><Link href="#product" scroll={true}>Our Product</Link></li>
+              <li><Link href="#pricing" scroll={true}>Pricing</Link></li>
               {/* <Dropdown name="Our Products" contents={[
                 {
                   name: 'Software Reservation',
@@ -39,13 +41,11 @@ export default async function Header() {
               <li><Link href="#" lang={lang}>Pricing</Link></li>
               <li><Link href="#" lang={lang}>Contact Us</Link></li> */}
             </ul>
-
-            <a href="#" className="bg-red-400 py-2 rounded-3xl hover:bg-red-500 text-white hidden md:flex" role="button">Sign In</a>
           </div>
         </div>
-        <MobileHeader />
 
       </nav>
+      <MobileHeader />
     </header>
   )
 }
