@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { phoneNumber } from "@/constant";
 import { PageParams } from "@/types";
-import { i18n } from "@/i18n.config";
 import Header from "./components/Header";
 
 // const inter = Inter({ subsets: ["latin"] });
@@ -31,12 +30,12 @@ export const structuredData = {
 };
 
 export default async function RootLayout({
-  children, params
+  children
 }: Readonly<{
   children: React.ReactNode;
 } & PageParams>) {
   return (
-    <html lang={params.lang}>
+    <html>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -62,7 +61,7 @@ export default async function RootLayout({
         />
       </head>
       <body>
-        <Header lang={params.lang} />
+        <Header />
         {children}
       </body>
     </html>

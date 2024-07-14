@@ -7,18 +7,13 @@ import { GrMoney } from "react-icons/gr";
 import { HiOutlineCursorClick } from "react-icons/hi";
 import UserEmailForm from "./components/form";
 import { PageParams } from "@/types";
-import { getDictionary } from "@/lib/dictionary";
-import { i18n } from "@/i18n.config";
 
-interface HomePropsI extends PageParams{
+interface HomePropsI extends PageParams {
 }
 
-export async function generateStaticParams() {
-  return i18n.locales.map(locale => ({ lang: locale }))
-}
 
-export default async function Home({ params: { lang }}: HomePropsI) {
-  const { page } = await getDictionary(lang);
+
+export default async function Home(props: HomePropsI) {
   return (
     <main className="w-screen h-screen md:h-full font-nexa">
 
@@ -32,7 +27,6 @@ export default async function Home({ params: { lang }}: HomePropsI) {
             height={150}
           />
         </div>
-        <h1>{page.home.title}</h1>
         <h1 className="text-3xl font-bold text-center px-7 py-9 pb-8 md:pt-16 md:text-5xl md:leading-[75px] lg:text-[70px] lg:leading-[86px]">
           Mau punya aplikasi <br /> reservasi pribadi?
         </h1>

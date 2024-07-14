@@ -26,3 +26,16 @@
   font-weight: 300;
   font-style: normal;
 }
+
+@keyframes Hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.close-menu {
+  animation: Hide 0.2s ease-in forwards;
+}
