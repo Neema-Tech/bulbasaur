@@ -23,15 +23,15 @@ interface HomePropsI extends PageParams {
 
 export default async function Home(props: HomePropsI) {
   return (
-    <main className="w-screen lg:h-full font-nexa">
+    <main className="w-full lg:h-full font-nexa">
       <section id="home" className="h-screen mb-5 w-full flex flex-col lg:justify-center lg:h-[600px]">
         <div className="container mx-auto flex flex-col justify-center items-center lg:flex-row lg:justify-between lg:px-10 lg:gap-5">
           <div className="text-center lg:text-left lg:w-full">
-            <h2 className="font-bold text-lg flex flex-row items-center justify-center mb-4 lg:justify-normal lg:text-3xl lg:mb-8">Pertama di Indonesia
+            <h2 className="font-bold text-lg flex flex-row items-center justify-center mb-4 lg:justify-normal lg:text-3xl lg:mb-5">Pertama di Indonesia
               <Image src={BadgeSVG} alt={"1st-badge"} className="object-contain w-9 ml-2" />
             </h2>
             <h1 className="font-bold text-3xl max-w-[400px] px-6 lg:px-0 lg:text-5xl lg:max-w-full lg:mb-8 lg:leading-[60px]">Miliki Aplikasi Booking
-              Untuk Bisnis {" "}
+              Pribadi Untuk {" "}
               <span id="swap-text" className="inline-flex justify-center items-center text-[#61BBEF]">
                 <ChangingText texts={[
                   "Lapangan",
@@ -75,18 +75,18 @@ export default async function Home(props: HomePropsI) {
           </button>
         </div>
       </section>
-      <section id="about" className="h-screen">
-      <ul>
-                <li className="flex flex-row items-center mb-2"><FaCheckCircle size={18} className="mr-2" color="#61BBEF" />Website Pribadi & Kostumisasi Tema</li>
-                <li className="flex flex-row items-center mb-2"><FaCheckCircle size={18} className="mr-2" color="#61BBEF" />Payment Gateway</li>
-                <li className="flex flex-row items-center mb-2"><FaCheckCircle size={18} className="mr-2" color="#61BBEF" />Administrasi Otomatis</li>
-                <li className="flex flex-row items-center mb-2"><FaCheckCircle size={18} className="mr-2" color="#61BBEF" />Cegah potensi human-error dan tingkatkan transparansi proses bisnis</li>
-                <li className="flex flex-row items-center mb-2"><FaCheckCircle size={18} className="mr-2" color="#61BBEF" />Kemudahan Penggunaan</li>
-              </ul>
+      <section id="about" className="h-screen w-full">
+        <ul>
+          <li className="flex flex-row items-center mb-2"><FaCheckCircle size={18} className="mr-2" color="#61BBEF" />Website Pribadi & Kostumisasi Tema</li>
+          <li className="flex flex-row items-center mb-2"><FaCheckCircle size={18} className="mr-2" color="#61BBEF" />Payment Gateway</li>
+          <li className="flex flex-row items-center mb-2"><FaCheckCircle size={18} className="mr-2" color="#61BBEF" />Administrasi Otomatis</li>
+          <li className="flex flex-row items-center mb-2"><FaCheckCircle size={18} className="mr-2" color="#61BBEF" />Cegah potensi human-error dan tingkatkan transparansi proses bisnis</li>
+          <li className="flex flex-row items-center mb-2"><FaCheckCircle size={18} className="mr-2" color="#61BBEF" />Kemudahan Penggunaan</li>
+        </ul>
 
       </section>
-      <section id="product" className="h-screen">Prod</section>
-      <section id="pricing" className="h-screen">Price</section>
+      <section id="product" className="h-screen w-full">Prod</section>
+      <section id="pricing" className="h-screen w-full">Price</section>
 
     </main>
   );
