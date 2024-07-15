@@ -25,7 +25,7 @@ export default async function Header() {
               <li className="hover:borderb-2 h-full justify-center items-center flex"><Link href="#header" scroll={true}>Home</Link></li>
               <li className="hover:borderb-2 h-full justify-center items-center flex"><Link href="#about" scroll={true}>About Us</Link></li>
               <li className="hover:borderb-2 h-full justify-center items-center flex"><Link href="#product" scroll={true}>Our Product</Link></li>
-              <li className="hover:borderb-2 h-full justify-center items-center flex"><Link href="#pricing" scroll={true}>Pricing</Link></li>
+              <li className="hover:borderb-2 h-full justify-center items-center flex"><Link href="#contact-us" scroll={true}>Contact Us</Link></li>
               {/* <Dropdown name="Our Products" contents={[
                 {
                   name: 'Software Reservation',

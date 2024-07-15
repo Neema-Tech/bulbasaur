@@ -15,6 +15,7 @@ import HourSVG from '../../public/svg/24hour.svg';
 import { BiCaretRight } from "react-icons/bi";
 import { FaCheckCircle } from "react-icons/fa";
 import Link from "next/link";
+import { FEATURE_SET } from "@/constant";
 
 interface HomePropsI extends PageParams {
 }
@@ -24,7 +25,7 @@ interface HomePropsI extends PageParams {
 export default async function Home(props: HomePropsI) {
   return (
     <main className="w-full lg:h-full font-nexa">
-      <section id="home" className="h-screen mb-5 w-full flex flex-col lg:justify-center lg:h-[600px]">
+      <section id="home" className="justify-center mt-[-60px] min-h-screen h-full mb-5 w-full flex flex-col lg:justify-center lg:h-[600px]">
         <div className="container mx-auto flex flex-col justify-center items-center lg:flex-row lg:justify-between lg:px-10 lg:gap-5">
           <div className="text-center lg:text-left lg:w-full">
             <h2 className="font-bold text-lg flex flex-row items-center justify-center mb-4 lg:justify-normal lg:text-3xl lg:mb-5">Pertama di Indonesia
@@ -50,9 +51,9 @@ export default async function Home(props: HomePropsI) {
               <Link className="bg-green-500 rounded-full pl-4 pr-5 py-2 flex flex-row justify-center items-center text-white" href="https://wa.me/62087880335189" target="_blank">
                 <FaWhatsapp size={24} className="mr-2 text-white text-base font-bold" /> Whatsapp Sales
               </Link>
-              <button className="bg-blue-600 rounded-full pl-5 pr-3 py-2 flex flex-row justify-center items-center text-white">
+              <Link href="#about" className="bg-blue-600 rounded-full pl-5 pr-3 py-2 flex flex-row justify-center items-center text-white">
                 Learn More <BiCaretRight size={24} className="ml-2 text-white text-base font-bold" />
-              </button>
+              </Link>
             </div>
           </div>
           <div className="hidden lg:flex w-full h-full my-5 max-h-[200px] max-w-[600px] lg:max-h-[500px] lg:max-w-full lg:w-full">
@@ -75,63 +76,29 @@ export default async function Home(props: HomePropsI) {
           </button>
         </div>
       </section>
-      <section id="about" className="h-screen w-full">
-        <ul>
-          <li className="flex flex-row items-center mb-2"><FaCheckCircle size={18} className="mr-2" color="#61BBEF" />Website Pribadi & Kostumisasi Tema</li>
-          <li className="flex flex-row items-center mb-2"><FaCheckCircle size={18} className="mr-2" color="#61BBEF" />Payment Gateway</li>
-          <li className="flex flex-row items-center mb-2"><FaCheckCircle size={18} className="mr-2" color="#61BBEF" />Administrasi Otomatis</li>
-          <li className="flex flex-row items-center mb-2"><FaCheckCircle size={18} className="mr-2" color="#61BBEF" />Cegah potensi human-error dan tingkatkan transparansi proses bisnis</li>
-          <li className="flex flex-row items-center mb-2"><FaCheckCircle size={18} className="mr-2" color="#61BBEF" />Kemudahan Penggunaan</li>
-        </ul>
+      
+      <section  id="about" className="min-h-screen w-full py-28 bg-[#F8FBFF]">
+        <div className="container mx-auto px-8">
+          <h2 className="mb-10 text-3xl  md:text-5xl text-center font-bold">Aplikasi Reservasi Pribadi <br /> untuk operasional bisnis yang lebih efektif</h2>
 
-      </section>
-      <section id="product" className="h-screen w-full">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl text-center">Aplikasi Reservasi Pribadi untuk operasional bisnis yang lebih efektif</h2>
-
-          <div className="w-full">
-            <div className="flex flex-row flex-wrap gap-11 justify-center">
-              <div className="flex w-[300px] h-fit bg-red-500 flex-col">
-                <div className="w-full h-[150px]">
-                  <Image src={ChooseThemeSVG} alt={"tema-wehsite-pilihan"} className="w-full h-full" />
+          <div className="w-full mt-14">
+            <div className="flex flex-row flex-wrap gap-7 xl:gap-0 justify-center">
+              {FEATURE_SET.map((feature, index) => (
+                <div key={index} className="text-center mb-6 w-full flex md:w-[300px] xl:w-[400px] xl:mb-5 h-fit flex-col">
+                  <div className="w-full mb-5 h-[70px] md:h-[90px] xl:h-[100px]">
+                    <Image src={feature.imgSrc} alt={feature.props.alt} className="w-full h-full" />
+                  </div>
+                  <h3 className="text-xl font-extrabold mb-3 lg:text-2xl xl:w-[60%] lg:h-16 lg:self-center">{feature.title}</h3>
+                  <p className="text-base lg:text-lg lg:w-[80%] lg:self-center">{feature.desc}</p>
                 </div>
-                <h2>Tema Website Pilihan</h2>
-                <p>Pilih dari berbagai tema menarik yang sesuai dengan brand anda.</p>
-              </div>
-              <div className="flex w-[300px] h-fit bg-red-500 flex-col">
-                <div className="w-full h-[150px]">
-                  <Image src={ChooseThemeSVG} alt={"tema-wehsite-pilihan"} className="w-full h-full" />
-                </div>
-                <h2>Tema Website Pilihan</h2>
-                <p>Pilih dari berbagai tema menarik yang sesuai dengan brand andaas dasdsasdadsadasdasasdsadasdsadasd asdsa dasd sada dasd .</p>
-              </div>
-              <div className="flex w-[300px] h-fit bg-red-500 flex-col">
-                <div className="w-full h-[150px]">
-                  <Image src={ChooseThemeSVG} alt={"tema-wehsite-pilihan"} className="w-full h-full" />
-                </div>
-                <h2>Tema Website Pilihan</h2>
-                <p>Pilih dari berbagai tema menarik yang sesuai dengan brand anda.</p>
-              </div>
-              <div className="flex w-[300px] h-fit bg-red-500 flex-col">
-                <div className="w-full h-[150px]">
-                  <Image src={ChooseThemeSVG} alt={"tema-wehsite-pilihan"} className="w-full h-full" />
-                </div>
-                <h2>Tema Website Pilihan</h2>
-                <p>Pilih dari berbagai tema menarik yang sesuai dengan brand anda.</p>
-              </div>
-              <div className="flex w-[300px] h-fit bg-red-500 flex-col">
-                <div className="w-full h-[150px]">
-                  <Image src={ChooseThemeSVG} alt={"tema-wehsite-pilihan"} className="w-full h-full" />
-                </div>
-                <h2>Tema Website Pilihan</h2>
-                <p>Pilih dari berbagai tema menarik yang sesuai dengan brand anda.</p>
-              </div>
+              ))}
             </div>
           </div>
         </div>
 
       </section>
-      <section id="pricing" className="h-screen w-full">Price</section>
+      <section id="product" className="min-h-screen w-full py-28">Price</section>
+      <section id="contact-us" className="min-h-screen w-full py-28">Contact Us</section>
 
     </main>
   );
