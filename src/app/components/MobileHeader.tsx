@@ -23,7 +23,7 @@ const MobileHeader = () => {
           <GiHamburgerMenu className="flex justify-center items-center text-black w-full h-full" size={24} />
         </button>
       </div>
-      <div className={`w-full md:hidden flex justify-center ${isOpen ? 'open-menu' : 'close-menu pointer-events-none'}`}>
+      <div className={`w-full lg:hidden flex justify-center ${isOpen ? 'open-menu' : 'close-menu pointer-events-none'}`}>
         <div className="absolute w-full">
           <ul className="bg-white shadow-lg leading-9 font-bold h-screen">
             <li className="py-2 border-b-2 border-white  bg-blue-400 hover:text-white pl-4"><a href="/" className="block pl-7">Home</a></li>

@@ -49,7 +49,7 @@
 }
 
 .close-menu {
-  animation: Hide 0.2s ease-in forwards;
+  animation: Hide 0s ease-in forwards;
 }
 .open-menu {
   animation: Show 0.2s ease-in forwards;

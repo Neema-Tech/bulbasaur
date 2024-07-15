@@ -8,10 +8,10 @@ import MobileHeader from "./MobileHeader";
 export default async function Header() {
 
   return (
-    <header className="relative h-20 w-full flex justify-center">
-      <nav className="container fixed w-full h-20 hidden bg-white md:block">
-        <div className="w-full h-full flex justify-between items-center px-10">
-          <div className="w-[150px] h-full">
+    <header id="header" className="relative h-20 w-full flex justify-center">
+      <nav className="fixed w-full h-20 hidden bg-white md:block">
+        <div className="container mx-auto w-full h-full flex justify-between items-center px-10">
+          <Link href="#header" scroll={true} className="w-[150px] h-full">
             <Image
               src="/images/logo-full.png"
               className="h-full w-full object-contain"
@@ -19,10 +19,10 @@ export default async function Header() {
               width={100}
               height={60}
             />
-          </div>
+          </Link>
           <div className="flex justify-between items-center h-full">
             <ul className="hidden md:flex space-x-16 font-bold tracking-wide">
-              <li><Link href="#" scroll={false}>Home</Link></li>
+              <li><Link href="#header" scroll={true}>Home</Link></li>
               <li><Link href="#about" scroll={true}>About Us</Link></li>
               <li><Link href="#product" scroll={true}>Our Product</Link></li>
               <li><Link href="#pricing" scroll={true}>Pricing</Link></li>
@@ -43,7 +43,6 @@ export default async function Header() {
             </ul>
           </div>
         </div>
-
       </nav>
       <MobileHeader />
     </header>
