@@ -1,18 +1,18 @@
 "use server"
 
 import Image from "next/image";
-import { RiWhatsappFill } from "react-icons/ri";
-import { MdOutlineCalendarMonth } from "react-icons/md";
-import { GrMoney } from "react-icons/gr";
-import { HiOutlineCursorClick } from "react-icons/hi";
-import UserEmailForm from "./components/form";
 import { PageParams } from "@/types";
-import { FaCaretDown, FaWhatsapp } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa6";
 import ChangingText from "./components/ChangingText";
 import BadgeSVG from "../../public/images/badge.svg";
 import LandingPageSVG from '../../public/images/landingpage1.svg';
+import WebSVG from '../../public/svg/web.svg';
+import ManageGearSVG from '../../public/svg/manage-gear.svg';
+import ChooseThemeSVG from '../../public/svg/choose-theme.svg';
+import CalendarSVG from '../../public/svg/calendar.svg';
+import HourSVG from '../../public/svg/24hour.svg';
+
 import { BiCaretRight } from "react-icons/bi";
-import { FaCheck } from "react-icons/fa6";
 import { FaCheckCircle } from "react-icons/fa";
 import Link from "next/link";
 
@@ -85,7 +85,52 @@ export default async function Home(props: HomePropsI) {
         </ul>
 
       </section>
-      <section id="product" className="h-screen w-full">Prod</section>
+      <section id="product" className="h-screen w-full">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl text-center">Aplikasi Reservasi Pribadi untuk operasional bisnis yang lebih efektif</h2>
+
+          <div className="w-full">
+            <div className="flex flex-row flex-wrap gap-11 justify-center">
+              <div className="flex w-[300px] h-fit bg-red-500 flex-col">
+                <div className="w-full h-[150px]">
+                  <Image src={ChooseThemeSVG} alt={"tema-wehsite-pilihan"} className="w-full h-full" />
+                </div>
+                <h2>Tema Website Pilihan</h2>
+                <p>Pilih dari berbagai tema menarik yang sesuai dengan brand anda.</p>
+              </div>
+              <div className="flex w-[300px] h-fit bg-red-500 flex-col">
+                <div className="w-full h-[150px]">
+                  <Image src={ChooseThemeSVG} alt={"tema-wehsite-pilihan"} className="w-full h-full" />
+                </div>
+                <h2>Tema Website Pilihan</h2>
+                <p>Pilih dari berbagai tema menarik yang sesuai dengan brand andaas dasdsasdadsadasdasasdsadasdsadasd asdsa dasd sada dasd .</p>
+              </div>
+              <div className="flex w-[300px] h-fit bg-red-500 flex-col">
+                <div className="w-full h-[150px]">
+                  <Image src={ChooseThemeSVG} alt={"tema-wehsite-pilihan"} className="w-full h-full" />
+                </div>
+                <h2>Tema Website Pilihan</h2>
+                <p>Pilih dari berbagai tema menarik yang sesuai dengan brand anda.</p>
+              </div>
+              <div className="flex w-[300px] h-fit bg-red-500 flex-col">
+                <div className="w-full h-[150px]">
+                  <Image src={ChooseThemeSVG} alt={"tema-wehsite-pilihan"} className="w-full h-full" />
+                </div>
+                <h2>Tema Website Pilihan</h2>
+                <p>Pilih dari berbagai tema menarik yang sesuai dengan brand anda.</p>
+              </div>
+              <div className="flex w-[300px] h-fit bg-red-500 flex-col">
+                <div className="w-full h-[150px]">
+                  <Image src={ChooseThemeSVG} alt={"tema-wehsite-pilihan"} className="w-full h-full" />
+                </div>
+                <h2>Tema Website Pilihan</h2>
+                <p>Pilih dari berbagai tema menarik yang sesuai dengan brand anda.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
       <section id="pricing" className="h-screen w-full">Price</section>
 
     </main>
