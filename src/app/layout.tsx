@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import { phoneNumber } from "@/constant";
+import { PageParams } from "@/types";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import { AnimationWrapper } from "./AnimationWrapper";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Neema - Aplikasi Reservasi Pribadi",
@@ -16,24 +20,24 @@ export const structuredData = {
   "url": "https://neema.id/",
   // "logo": "https://neema.id/logo.png",
   // "sameAs": [
-    // "https://www.facebook.com/your-profile",
-    // "https://www.twitter.com/your-profile",
-    // "https://www.instagram.com/your-profile"
+  // "https://www.facebook.com/your-profile",
+  // "https://www.twitter.com/your-profile",
+  // "https://www.instagram.com/your-profile"
   // ],
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+62-878-8033-5189",
+    "telephone": phoneNumber,
     "contactType": "Customer Service"
   }
 };
 
-export default function RootLayout({
-  children,
+export default async function RootLayout({
+  children
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+} & PageParams>) {
   return (
-    <html lang="en">
+    <html className="scroll-smooth">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -57,8 +61,19 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className="transition-all">
+        <Header />
+        <AnimationWrapper>
+          {children}
+        </AnimationWrapper>
+        <Footer />
+      </body>
     </html>
   );
 }

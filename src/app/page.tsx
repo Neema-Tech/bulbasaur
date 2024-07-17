@@ -1,92 +1,103 @@
-import Image from "next/image";
-import LogoFull from "../../public/logo-full.png";
-import BookingIllustration from "../../public/booking-illustration.png";
-import BookingIllustrationBg from "../../public/booking-illustration-bg.png";
-import { RiWhatsappFill } from "react-icons/ri";
-import { MdOutlineCalendarMonth } from "react-icons/md";
-import { GrMoney } from "react-icons/gr";
-import { HiOutlineCursorClick } from "react-icons/hi";
-import UserEmailForm from "./form";
-import Link from "next/link";
+"use server"
 
-export default function Home() {
+import Image from "next/image";
+import { PageParams } from "@/types";
+import { FaWhatsapp } from "react-icons/fa6";
+import ChangingText from "./components/ChangingText";
+import BadgeSVG from "../../public/images/badge.svg";
+import LandingPageSVG from '../../public/images/landingpage1.svg';
+import { BiCaretRight } from "react-icons/bi";
+import Link from "next/link";
+import { FEATURE_SET, whatsappLink } from "@/constant";
+import ContactUsForm from "./components/ContactUsForm";
+import { motion } from "framer-motion"
+
+interface HomePropsI extends PageParams {
+}
+
+
+
+export default async function Home(props: HomePropsI) {
   return (
-    <main className="w-screen h-screen md:h-full font-nexa">
-      <section className="flex flex-col w-full h-full flex-column items-center pt-10">
-        <div className="w-full max-w-[200px] mb-5 md:w-[300px]">
-          <Image
-            src={LogoFull.src}
-            className="h-full w-full object-contain"
-            alt="Neema Logo"
-            width={300}
-            height={150}
-          />
-        </div>
-        <h1 className="text-3xl font-bold text-center px-7 py-9 pb-8 md:pt-16 md:text-5xl md:leading-[75px] lg:text-[70px] lg:leading-[86px]">
-          Mau punya aplikasi <br /> reservasi pribadi?
-        </h1>
-        <div
-          className="flex flex-col justify-center items-center w-full h-full bg-no-repeat bg-cover bg-center pb-24 md:h-[600px]"
-          style={{ backgroundImage: `url(${BookingIllustrationBg.src})` }}
-        >
-          <div className="w-full h-full max-w-[550px] relative flex justify-center items-center md:max-w-[800px]">
+    <main className="w-full lg:h-full font-nexa">
+      <section id="home" className="justify-center mt-[-60px] min-h-screen h-full mb-5 w-full flex flex-col lg:justify-center lg:h-[600px]">
+        <div className="container mx-auto flex flex-col justify-center items-center lg:flex-row lg:justify-between lg:px-10 lg:gap-5">
+          <div className="text-center lg:text-left lg:w-full">
+            <h2 className="font-bold text-lg flex flex-row items-center justify-center mb-4 lg:justify-normal lg:text-3xl lg:mb-5">Pertama di Indonesia
+              <Image src={BadgeSVG} alt={"1st-badge"} className="object-contain w-9 ml-2" />
+            </h2>
+            <h1 className="font-bold text-3xl max-w-[400px] px-6 lg:px-0 lg:text-5xl lg:max-w-full lg:mb-8 lg:leading-[60px]">Miliki Aplikasi Booking
+              Pribadi Untuk {" "}
+              <span id="swap-text" className="inline-flex justify-center items-center text-[#61BBEF]">
+                <ChangingText texts={[
+                  "Lapangan",
+                  "Les Privat",
+                  "Sewa Hall",
+                  "Photo Studio",
+                  "Sewa Kamar",
+                  "Sewa Tour",
+                  "Sewa Penjemputan",
+                  "Sewa Kantor"
+                ]} />.
+              </span>
+            </h1>
+            <p className="mt-5 text-left hidden lg:block lg:text-2xl lg:mb-8">Neema, menghilangkan stress dalam mengelola pemesanan, atur jadwal, terima bayaran, dan pantau transaksi dengan santai lewat platform canggih yang disuguhkan.</p>
+            <div className="flex-row items-center gap-4 mt-5 hidden lg:flex">
+              <Link className="bg-green-500 rounded-full pl-4 pr-5 py-2 flex flex-row justify-center items-center text-white" href={whatsappLink} target="_blank">
+                <FaWhatsapp size={24} className="mr-2 text-white text-base font-bold" /> Whatsapp Kami
+              </Link>
+              <Link href="#product" className="bg-blue-600 rounded-full pl-5 pr-3 py-2 flex flex-row justify-center items-center text-white">
+                Pelajari Lebih <BiCaretRight size={24} className="ml-2 text-white text-base font-bold" />
+              </Link>
+            </div>
+          </div>
+          <div
+            className="hidden lg:flex w-full h-full my-5 max-h-[200px] max-w-[600px] lg:max-h-[500px] lg:max-w-full lg:w-full">
             <Image
-              className="w-full h-full object-contain absolute right-4 bottom-11 md:bottom-[20%]"
-              src={BookingIllustration.src}
-              width={400}
-              height={400}
-              alt={"booking-illustration"}
+              src={LandingPageSVG}
+              alt={"1st-badge"}
+              className="object-contain w-full"
             />
           </div>
-          <div className="flex flex-col w-full px-6 md:flex-row md:justify-center md:items-center md:gap-3 md:max-w-[900px]">
-            <UserEmailForm />
-            <a
-              href="https://api.whatsapp.com/send/?phone=62087880335189&text=Hi Neema!, Saya ingin bertanya, "
-              target="_blank"
-              className="bg-green-500 rounded-full text-white py-2 px-3 mt-4 flex flex-row justify-center items-center gap-2 border-white border-8 md:w-[300px] md:m-0"
-            >
-              <RiWhatsappFill className="text-lg" />
-              <span className="text-base leading-4">Whatsapp Kami</span>
-            </a>
-          </div>
+        </div>
+        {/* Mobile Mode */}
+        <p className="mt-5 md:w-[80%] self-center text-center px-6 lg:hidden">Neema, menghilangkan stress dalam mengelola pemesanan, atur jadwal, terima bayaran, dan pantau transaksi dengan santai lewat platform canggih yang disuguhkan.</p>
+
+        <div className="flex flex-col justify-center items-center gap-4 mt-5 lg:justify-normal lg:hidden">
+          <button className="bg-green-500 rounded-full pl-4 pr-5 py-2 flex flex-row justify-center items-center text-white">
+            <FaWhatsapp size={24} className="mr-2 text-white text-base font-bold" /> Coba Sekarang
+          </button>
+          <button className="bg-blue-600 rounded-full pl-5 pr-3 py-2 flex flex-row justify-center items-center text-white">
+            Pelajari <BiCaretRight size={24} className="ml-2 text-white text-base font-bold" />
+          </button>
         </div>
       </section>
 
-      <section className="w-full mb-[150px] md:px-[50px] lg:px-[100px] xl:px-[200px]">
-        <h2 className="text-3xl font-bold text-center px-7 py-9 pb-11 md:pt-16 md:text-5xl md:leading-[75px] lg:text-[70px] lg:leading-[86px]">
-          Punyai website pribadi untuk reservasi hanya dengan 3 langkah.
-        </h2>
-        <div className="grid grid-cols-1 py-4 px-5 gap-10 md:px-0 md:grid-cols-3 md:grid-row-3">
-          <div className="flex flex-col items-left">
-            <span className="w-full h-16"><HiOutlineCursorClick className="text-6xl" /></span>
-            <p className="w-full text-xl mb-2 mt-5 font-bold">① Registrasi & Kustomisasi Tema</p>
-            <p className="text-base">Sesuaikan desain situs reservasi Anda dengan berbagai pilihan tema. <br /> Tidak perlu pengalaman desain atau keterampilan pemrograman.</p>
-          </div>
-          <div className="flex flex-col items-left">
-            <span className="w-full h-16"><MdOutlineCalendarMonth className="text-6xl" /></span>
-            <p className="w-full text-xl mb-2 mt-5 font-bold">② Tambahkan Jadwal</p>
-            <p className="text-base">Tambahkan jadwal yang anda punya. <br /> Tampilkan dengan <b>foto terbaik, harga, dan deskripsi</b>.</p>
-          </div>
-          <div className="flex flex-col items-left">
-            <span className="w-full h-16"><GrMoney className="text-6xl" /></span>
-            <p className="w-full text-xl mb-2 mt-5 font-bold">③ Mulai Terima Reservasi</p>
-            <p className="text-base">Atur metode pembayaran dan mulai terima booking.</p>
+      <section id="product" className="min-h-screen w-full py-28 bg-[#F8FBFF]">
+        <div className="container mx-auto px-8">
+          <h1 className="mb-10 text-3xl  md:text-5xl text-center font-bold">Aplikasi Reservasi Pribadi <br /> untuk operasional bisnis yang lebih efektif</h1>
+
+          <div className="w-full mt-14">
+            <div className="flex flex-row flex-wrap gap-7 xl:gap-0 justify-center">
+              {FEATURE_SET.map((feature, index) => (
+                <div key={index} className="text-center mb-6 w-full flex md:w-[300px] xl:w-[400px] xl:mb-5 h-fit flex-col">
+                  <div className="w-full mb-5 h-[70px] md:h-[90px] xl:h-[100px]">
+                    <Image src={feature.imgSrc} alt={feature.props.alt} className="w-full h-full" />
+                  </div>
+                  <h3 className="text-xl font-extrabold mb-3 lg:text-2xl xl:w-[60%] lg:h-16 lg:self-center">{feature.title}</h3>
+                  <p className="text-base lg:text-lg lg:w-[80%] lg:self-center">{feature.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-        <div className="w-full h-[1px] bg-slate-400 mt-5"></div>
-        <div className="flex flex-col justify-center items-center px-20 min-h-96 md:px-52">
-          <p className="text-xl text-center font-bold mb-5">“Neema selalu mendengarkan pelanggannya dan berusaha melakukan segala kemungkinan untuk membantu mereka mencapai kebutuhan mereka.”</p>
-          <a
-            href="https://api.whatsapp.com/send/?phone=62087880335189&text=Hi Neema!, Saya ingin memberikan feedback. Menurut saya.."
-            target="_blank"
-            className="bg-green-500 rounded-full text-white py-3 px-3 flex flex-row justify-center items-center gap-2 md:w-[300px] md:m-0"
-          >
-            <RiWhatsappFill className="text-lg" />
-            <span className="text-base leading-4">Hubungi Kami</span>
-          </a>
+
+      </section>
+      {/* <section id="product" className="min-h-screen w-full py-28">Price</section> */}
+      <section id="contact-us" className="min-h-screen w-full py-28 flex items-center">
+        <div className="container mx-auto lg:px-4">
+          <ContactUsForm />
         </div>
-
-
       </section>
 
     </main>
