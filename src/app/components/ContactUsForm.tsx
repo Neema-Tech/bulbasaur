@@ -103,7 +103,7 @@ const UserEmailForm = () => {
           <div className="flex flex-grow flex-col">
             <h2 className="text-3xl font-bold">Mau tanya-tanya? </h2>
             <p className="text-base  text-slate-500">Yuk langsung hubungi kami!</p>
-            <a href={whatsappLink} target="_blank" className="w-full mt-3 flex flex-wrap gap-5">
+            <a href={whatsappLink} rel="noopener noreferrer" target="_blank" className="w-full mt-3 flex flex-wrap gap-5">
               <span className="flex flex-grow justify-center items-center text-sm bg-green-500 text-white px-2 py-2 rounded-md font-bold">
                 <FaWhatsapp className="w-7 h-7 mr-1" /> Whatsapp
               </span>

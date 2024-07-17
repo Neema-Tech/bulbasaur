@@ -1,3 +1,4 @@
+import { socialMedia, whatsappLink } from "@/constant";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -22,7 +23,7 @@ export default async function Footer() {
                 <p className="mt-2 mb-5">
                   Temui kami dari platform sosial media kami, kami merespon dalam 1-2 hari kerja.
                 </p>
-                <a href="https://www.instagram.com/appify.solution" className="w-12 h-12 bg-white rounded-full p-1 mb-5">
+                <a href={socialMedia.INSTAGRAM} rel="noopener noreferrer" target="_blank" className="w-12 h-12 bg-white rounded-full p-1 mb-5">
                   <Image
                     src="/svg/instagram.svg"
                     className="h-full w-full object-contain"
