@@ -10,8 +10,7 @@ import { BiCaretRight } from "react-icons/bi";
 import Link from "next/link";
 import { FEATURE_SET, whatsappLink } from "@/constant";
 import ContactUsForm from "./components/ContactUsForm";
-import { useRouter } from "next/router";
-import { AnimationWrapper } from "./AnimationWrapper";
+import { motion } from "framer-motion"
 
 interface HomePropsI extends PageParams {
 }
@@ -52,13 +51,14 @@ export default async function Home(props: HomePropsI) {
               </Link>
             </div>
           </div>
-          <motion.div className="hidden lg:flex w-full h-full my-5 max-h-[200px] max-w-[600px] lg:max-h-[500px] lg:max-w-full lg:w-full">
+          <div
+            className="hidden lg:flex w-full h-full my-5 max-h-[200px] max-w-[600px] lg:max-h-[500px] lg:max-w-full lg:w-full">
             <Image
               src={LandingPageSVG}
               alt={"1st-badge"}
               className="object-contain w-full"
             />
-          </motion.div>
+          </div>
         </div>
         {/* Mobile Mode */}
         <p className="mt-5 md:w-[80%] self-center text-center px-6 lg:hidden">Neema, menghilangkan stress dalam mengelola pemesanan, atur jadwal, terima bayaran, dan pantau transaksi dengan santai lewat platform canggih yang disuguhkan.</p>
@@ -95,7 +95,7 @@ export default async function Home(props: HomePropsI) {
       </section>
       {/* <section id="product" className="min-h-screen w-full py-28">Price</section> */}
       <section id="contact-us" className="min-h-screen w-full py-28 flex items-center">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto lg:px-4">
           <ContactUsForm />
         </div>
       </section>

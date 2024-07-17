@@ -87,19 +87,20 @@ const UserEmailForm = () => {
         onSubmit={handleSubmit}
         action="#"
         method="post"
-        className="bg-blue-100 px-5 md:px-10 py-8 rounded-lg contact-form w-full md:max-w-5xl"
+        className="bg-blue-100 px-5 md:px-10 py-8 rounded-lg contact-form w-full"
       >
         <div className="flex">
-          <div className="flex-grow hidden md:flex p-5 pr-10 justify-center">
+          <div className="hidden md:flex md:h-[500px] lg:h-[550px] md:w-fit p-5 lg:pr-10">
             <a className="pointer-events-none" href="https://www.vecteezy.com/png/24785806-3d-male-character-pointing-left">
               <Image
                 width={150}
                 height={150}
+                className="w-full h-full object-contain"
                 alt="contact-img"
                 src="./images/contact-us.png" />
             </a>
           </div>
-          <div className="flex flex-grow flex-col w-full">
+          <div className="flex flex-grow flex-col">
             <h2 className="text-3xl font-bold">Mau tanya-tanya? </h2>
             <p className="text-base  text-slate-500">Yuk langsung hubungi kami!</p>
             <a href={whatsappLink} target="_blank" className="w-full mt-3 flex flex-wrap gap-5">

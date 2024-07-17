@@ -4,6 +4,7 @@ import { phoneNumber } from "@/constant";
 import { PageParams } from "@/types";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { AnimationWrapper } from "./AnimationWrapper";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -68,7 +69,9 @@ export default async function RootLayout({
       </head>
       <body className="transition-all">
         <Header />
-        {children}
+        <AnimationWrapper>
+          {children}
+        </AnimationWrapper>
         <Footer />
       </body>
     </html>

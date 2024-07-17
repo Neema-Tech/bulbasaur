@@ -1,8 +1,5 @@
-import LangSwitcher from "./LangSwitcher";
 import Image from "next/image";
-import Dropdown from "./Dropdown";
 import Link from "next/link";
-import { useState } from "react";
 import MobileHeader from "./MobileHeader";
 
 export default async function Header() {
