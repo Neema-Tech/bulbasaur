@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { i18n } from '@/i18n.config';
 import { usePathname } from 'next/navigation';
 
 interface LangSwitcherPropsI {

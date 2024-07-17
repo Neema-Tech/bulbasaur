@@ -55,3 +55,8 @@
   animation: Show 0.2s ease-in forwards;
 }
 
+
+.contact-form input {
+  padding: 8px 12px;
+  border-radius: 4px;
+}

@@ -6,16 +6,12 @@ import { FaWhatsapp } from "react-icons/fa6";
 import ChangingText from "./components/ChangingText";
 import BadgeSVG from "../../public/images/badge.svg";
 import LandingPageSVG from '../../public/images/landingpage1.svg';
-import WebSVG from '../../public/svg/web.svg';
-import ManageGearSVG from '../../public/svg/manage-gear.svg';
-import ChooseThemeSVG from '../../public/svg/choose-theme.svg';
-import CalendarSVG from '../../public/svg/calendar.svg';
-import HourSVG from '../../public/svg/24hour.svg';
-
 import { BiCaretRight } from "react-icons/bi";
-import { FaCheckCircle } from "react-icons/fa";
 import Link from "next/link";
-import { FEATURE_SET } from "@/constant";
+import { FEATURE_SET, whatsappLink } from "@/constant";
+import ContactUsForm from "./components/ContactUsForm";
+import { useRouter } from "next/router";
+import { AnimationWrapper } from "./AnimationWrapper";
 
 interface HomePropsI extends PageParams {
 }
@@ -48,24 +44,24 @@ export default async function Home(props: HomePropsI) {
             </h1>
             <p className="mt-5 text-left hidden lg:block lg:text-2xl lg:mb-8">Neema, menghilangkan stress dalam mengelola pemesanan, atur jadwal, terima bayaran, dan pantau transaksi dengan santai lewat platform canggih yang disuguhkan.</p>
             <div className="flex-row items-center gap-4 mt-5 hidden lg:flex">
-              <Link className="bg-green-500 rounded-full pl-4 pr-5 py-2 flex flex-row justify-center items-center text-white" href="https://wa.me/62087880335189" target="_blank">
-                <FaWhatsapp size={24} className="mr-2 text-white text-base font-bold" /> Whatsapp Sales
+              <Link className="bg-green-500 rounded-full pl-4 pr-5 py-2 flex flex-row justify-center items-center text-white" href={whatsappLink} target="_blank">
+                <FaWhatsapp size={24} className="mr-2 text-white text-base font-bold" /> Whatsapp Kami
               </Link>
-              <Link href="#about" className="bg-blue-600 rounded-full pl-5 pr-3 py-2 flex flex-row justify-center items-center text-white">
-                Learn More <BiCaretRight size={24} className="ml-2 text-white text-base font-bold" />
+              <Link href="#product" className="bg-blue-600 rounded-full pl-5 pr-3 py-2 flex flex-row justify-center items-center text-white">
+                Pelajari Lebih <BiCaretRight size={24} className="ml-2 text-white text-base font-bold" />
               </Link>
             </div>
           </div>
-          <div className="hidden lg:flex w-full h-full my-5 max-h-[200px] max-w-[600px] lg:max-h-[500px] lg:max-w-full lg:w-full">
+          <motion.div className="hidden lg:flex w-full h-full my-5 max-h-[200px] max-w-[600px] lg:max-h-[500px] lg:max-w-full lg:w-full">
             <Image
               src={LandingPageSVG}
               alt={"1st-badge"}
               className="object-contain w-full"
             />
-          </div>
+          </motion.div>
         </div>
         {/* Mobile Mode */}
-        <p className="mt-5 text-center px-6 lg:hidden">Neema, menghilangkan stress dalam mengelola pemesanan, atur jadwal, terima bayaran, dan pantau transaksi dengan santai lewat platform canggih yang disuguhkan.</p>
+        <p className="mt-5 md:w-[80%] self-center text-center px-6 lg:hidden">Neema, menghilangkan stress dalam mengelola pemesanan, atur jadwal, terima bayaran, dan pantau transaksi dengan santai lewat platform canggih yang disuguhkan.</p>
 
         <div className="flex flex-col justify-center items-center gap-4 mt-5 lg:justify-normal lg:hidden">
           <button className="bg-green-500 rounded-full pl-4 pr-5 py-2 flex flex-row justify-center items-center text-white">
@@ -76,10 +72,10 @@ export default async function Home(props: HomePropsI) {
           </button>
         </div>
       </section>
-      
-      <section  id="about" className="min-h-screen w-full py-28 bg-[#F8FBFF]">
+
+      <section id="product" className="min-h-screen w-full py-28 bg-[#F8FBFF]">
         <div className="container mx-auto px-8">
-          <h2 className="mb-10 text-3xl  md:text-5xl text-center font-bold">Aplikasi Reservasi Pribadi <br /> untuk operasional bisnis yang lebih efektif</h2>
+          <h1 className="mb-10 text-3xl  md:text-5xl text-center font-bold">Aplikasi Reservasi Pribadi <br /> untuk operasional bisnis yang lebih efektif</h1>
 
           <div className="w-full mt-14">
             <div className="flex flex-row flex-wrap gap-7 xl:gap-0 justify-center">
@@ -97,8 +93,12 @@ export default async function Home(props: HomePropsI) {
         </div>
 
       </section>
-      <section id="product" className="min-h-screen w-full py-28">Price</section>
-      <section id="contact-us" className="min-h-screen w-full py-28">Contact Us</section>
+      {/* <section id="product" className="min-h-screen w-full py-28">Price</section> */}
+      <section id="contact-us" className="min-h-screen w-full py-28 flex items-center">
+        <div className="container mx-auto px-4">
+          <ContactUsForm />
+        </div>
+      </section>
 
     </main>
   );

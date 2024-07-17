@@ -3,6 +3,7 @@ import "./globals.css";
 import { phoneNumber } from "@/constant";
 import { PageParams } from "@/types";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -68,6 +69,7 @@ export default async function RootLayout({
       <body className="transition-all">
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
