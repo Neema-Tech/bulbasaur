@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { sendToDiscord } from "../../service/discordWebhook";
 import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import { phoneNumber, whatsappLink } from "@/constant";
 import Image from "next/image";
