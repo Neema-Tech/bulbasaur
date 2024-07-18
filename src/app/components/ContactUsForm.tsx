@@ -6,7 +6,6 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 import "react-phone-number-input/style.css";
-import { FaSquareInstagram } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
 import axios from "axios";
 
@@ -47,7 +46,7 @@ const UserEmailForm = () => {
         try {
             setIsLoading(true);
             setError((err) => ({ ...err, isError: false, message: "" }));
-            await axios.post("/submit-form", {
+            await axios.post("/api/submit-form", {
                 username: "Neema - Contact Form",
                 message: `${name}|${phone}|\n${message}`,
             });
