@@ -240,7 +240,7 @@ const UserEmailForm = () => {
                                         message.length === 0 || isLoading
                                     }
                                 >
-                                    {isLoading ? "Loading..." : "Hubungi Kami"}
+                                    {isLoading ? "Sedang mengirim..." : "Hubungi Kami"}
                                 </button>
                             </div>
                         </div>

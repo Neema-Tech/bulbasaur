@@ -1,5 +1,3 @@
-"use server"
-
 import Image from "next/image";
 import { PageParams } from "@/types";
 import { FaWhatsapp } from "react-icons/fa6";
@@ -10,7 +8,6 @@ import { BiCaretRight } from "react-icons/bi";
 import Link from "next/link";
 import { FEATURE_SET, whatsappLink } from "@/constant";
 import ContactUsForm from "./components/ContactUsForm";
-import { motion } from "framer-motion"
 
 interface HomePropsI extends PageParams {
 }
