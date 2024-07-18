@@ -46,9 +46,16 @@ const UserEmailForm = () => {
         try {
             setIsLoading(true);
             setError((err) => ({ ...err, isError: false, message: "" }));
-            await axios.post("/api/submit-form", {
-                username: "Neema - Contact Form",
-                message: `${name}|${phone}|\n${message}`,
+            await axios({
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                data: JSON.stringify({
+                    username: "Neema - Contact Form",
+                    content: `${name}|${phone}|\n${message}`,
+                }),
+                url: "https://discord.com/api/webhooks/1262707799301816391/DCf191NalBaltoMmXfmKuSDinVsmDRttz8OIc5IT-OspN3BYSZXtlTPp3s00zWis_1T2",
             });
             router.replace("/thankyou");
         } catch (e) {
