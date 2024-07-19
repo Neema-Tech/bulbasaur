@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -26,10 +27,9 @@ const MobileHeader = () => {
       <div className={`w-full lg:hidden flex justify-center ${isOpen ? 'open-menu' : 'close-menu pointer-events-none'}`}>
         <div className="absolute w-full">
           <ul className="bg-white shadow-lg leading-9 font-bold h-screen">
-            <li className="py-2 border-b-2 border-white  bg-blue-400 hover:text-white pl-4"><a href="/" className="block pl-7">Home</a></li>
-            <li className="py-2 border-b-2 border-white  bg-blue-400 hover:text-white pl-4"><a href="#" className="block pl-7">About Us</a></li>
-            <li className="py-2 border-b-2 border-white  bg-blue-400 hover:text-white pl-4"><a href="#" className="block pl-7">Our Product</a></li>
-            <li className="py-2 border-b-2 border-white  bg-blue-400 hover:text-white pl-4"><a href="#" className="block pl-7">Pricing</a></li>
+            <li className="py-2 border-b-2 border-white  bg-blue-200 hover:text-white pl-4"><Link onClick={() => setIsOpen(false)} href="/#header" className="block pl-7">Home</Link></li>
+            <li className="py-2 border-b-2 border-white  bg-blue-200 hover:text-white pl-4"><Link onClick={() => setIsOpen(false)} href="/#product" className="block pl-7">Our Product</Link></li>
+            <li className="py-2 border-b-2 border-white  bg-blue-200 hover:text-white pl-4"><Link onClick={() => setIsOpen(false)} href="/#contact-us" className="block pl-7">Contact Us</Link></li>
           </ul>
         </div>
       </div>

@@ -5,8 +5,8 @@ import CalendarSVG from '../public/svg/calendar.svg';
 import HourSVG from '../public/svg/24hour.svg';
 
 
-export const phoneNumber = '+6287880335189';
-export const whatsappLink = "https://wa.me/62087880335189";
+export const phoneNumber = '+62859106662562';
+export const whatsappLink = "https://wa.me/62859106662562";
 export const socialMedia = {
   INSTAGRAM: "https://www.instagram.com/neema.tech/",
 }
