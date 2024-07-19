@@ -17,6 +17,7 @@ const UserEmailForm = () => {
     const [isNameValid, setIsNameValid] = useState<boolean>(true);
     const [isMessageValid, setIsMessageValid] = useState<boolean>(true);
     const [isLoading, setIsLoading] = useState<boolean>(false);
+    const whatsappText = "?text=Halo Neema, saya ingin bertanya mengenai Neema"; 
 
     const [error, setError] = useState<{
         isError: boolean;
@@ -129,7 +130,7 @@ const UserEmailForm = () => {
                             Yuk langsung hubungi kami!
                         </p>
                         <a
-                            href={whatsappLink}
+                            href={whatsappLink + whatsappText}
                             rel="noopener noreferrer"
                             target="_blank"
                             className="w-full mt-3 flex flex-wrap gap-5"

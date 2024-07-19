@@ -15,6 +15,7 @@ interface HomePropsI extends PageParams {
 
 
 export default async function Home(props: HomePropsI) {
+  const whatsappText = "?text=Halo Neema, saya ingin membuat website booking saya!"; 
   return (
     <main className="w-full lg:h-full font-nexa">
       <section id="home" className="justify-center mt-[-60px] min-h-screen h-full mb-5 w-full flex flex-col lg:justify-center lg:h-[600px]">
@@ -40,7 +41,7 @@ export default async function Home(props: HomePropsI) {
             </h1>
             <p className="mt-5 text-left hidden lg:block lg:text-2xl lg:mb-8">Neema, menghilangkan stress dalam mengelola pemesanan, atur jadwal, terima bayaran, dan pantau transaksi dengan santai lewat platform canggih yang disuguhkan.</p>
             <div className="flex-row items-center gap-4 mt-5 hidden lg:flex">
-              <Link className="bg-green-500 rounded-full pl-4 pr-5 py-2 flex flex-row justify-center items-center text-white" href={whatsappLink} rel="noopener noreferrer" target="_blank">
+              <Link className="bg-green-500 rounded-full pl-4 pr-5 py-2 flex flex-row justify-center items-center text-white" href={whatsappLink + whatsappText} rel="noopener noreferrer" target="_blank">
                 <FaWhatsapp size={24} className="mr-2 text-white text-base font-bold" /> Whatsapp Kami
               </Link>
               <Link href="#product" className="bg-blue-600 rounded-full pl-5 pr-3 py-2 flex flex-row justify-center items-center text-white">
@@ -61,9 +62,9 @@ export default async function Home(props: HomePropsI) {
         <p className="mt-5 md:w-[80%] self-center text-center px-6 lg:hidden">Neema, menghilangkan stress dalam mengelola pemesanan, atur jadwal, terima bayaran, dan pantau transaksi dengan santai lewat platform canggih yang disuguhkan.</p>
 
         <div className="flex flex-col justify-center items-center gap-4 mt-5 lg:justify-normal lg:hidden">
-          <button className="bg-green-500 rounded-full pl-4 pr-5 py-2 flex flex-row justify-center items-center text-white">
+          <a href={whatsappLink + whatsappText} rel="noopener noreferrer" target="_blank" className="bg-green-500 rounded-full pl-4 pr-5 py-2 flex flex-row justify-center items-center text-white">
             <FaWhatsapp size={24} className="mr-2 text-white text-base font-bold" /> Coba Sekarang
-          </button>
+          </a>
           <button className="bg-blue-600 rounded-full pl-5 pr-3 py-2 flex flex-row justify-center items-center text-white">
             Pelajari <BiCaretRight size={24} className="ml-2 text-white text-base font-bold" />
           </button>
