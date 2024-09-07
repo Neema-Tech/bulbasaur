@@ -6,7 +6,7 @@ export default async function Header() {
 
   return (
     <header id="header" className="relative h-20 w-full flex justify-center">
-      <nav className="fixed w-full h-20 hidden bg-white md:block">
+      <nav className="fixed w-full h-20 hidden bg-white md:block z-50">
         <div className="container mx-auto w-full h-full flex justify-between items-center px-10">
           <Link href="#header" scroll={true} className="w-[150px] h-full">
             <Image

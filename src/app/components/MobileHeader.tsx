@@ -9,7 +9,7 @@ const MobileHeader = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <nav className="lg:hidden fixed w-full bg-white">
+    <nav className="lg:hidden fixed w-full bg-white z-50">
       <div className="flex flex-row justify-between items-center py-5 px-3">
         <div className="w-[180px] h-full">
           <Image
