@@ -6,7 +6,7 @@ import BadgeSVG from "../../public/images/badge.svg";
 import LandingPageSVG from '../../public/images/landingpage1.svg';
 import { BiCaretRight } from "react-icons/bi";
 import Link from "next/link";
-import { FEATURE_SET, FOR_YOU_CONTENT, whatsappLink } from "@/constant";
+import { FEATURE_SET, FOR_YOU_CONTENT, whatsappLink, WHY_US_CONTENT } from "@/constant";
 import ContactUsForm from "./components/ContactUsForm";
 import { div } from "framer-motion/client";
 
@@ -108,8 +108,38 @@ export default async function Home(props: HomePropsI) {
             </div>
           </div>
         </div>
-
       </section>
+
+      <section id="why-us" className="min-h-screen w-full bg-[#F8FBFF]">
+        <div className="bg-white py-24 sm:py-32">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-3xl lg:text-center">
+              <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center">
+                Apa yang <span className="text-blue-600">Neema</span> Bisa Lakukan untuk Anda?
+              </p>
+            </div>
+            <div className="mx-auto mt-8 max-w-2xl sm:mt-12 lg:mt-16 lg:max-w-4xl">
+              <dl className="grid grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+                {WHY_US_CONTENT.map((feature) => (
+                  <div key={feature.name} className="flex flex-col shadow-lg rounded-lg p-5 border-2">
+                    <div className="flex flex-row items-center text-base font-semibold leading-7 text-gray-900 min-h-20">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 mr-2 flex-shrink-0">
+                        {/* <div aria-hidden="true" className="h-8 w-8 text-white">
+                          <Image src={feature.icon} alt={feature.name} className="w-full h-full" />
+                        </div> */}
+                      </div>
+                      {feature.name}
+                    </div>
+                    <hr className="h-px my-2 bg-gray-300 border-0"></hr>
+                    <dd className="text-base leading-7 text-gray-600">{feature.description}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* <section id="product" className="min-h-screen w-full py-28">Price</section> */}
       <section id="contact-us" className="min-h-screen w-full py-28 flex items-center">
         <div className="container mx-auto lg:px-4">
