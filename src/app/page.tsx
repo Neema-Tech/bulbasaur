@@ -8,7 +8,6 @@ import { BiCaretRight } from "react-icons/bi";
 import Link from "next/link";
 import { FEATURE_SET, FOR_YOU_CONTENT, whatsappLink, WHY_US_CONTENT } from "@/constant";
 import ContactUsForm from "./components/ContactUsForm";
-import { div } from "framer-motion/client";
 import SparkleSVG from "./components/icons/SparkleSVG";
 import HomePhone from "../../public/images/home-main.png";
 
