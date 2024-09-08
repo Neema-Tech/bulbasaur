@@ -124,10 +124,10 @@ const UserEmailForm = () => {
           </div>
           <div className="flex flex-grow flex-col">
             <h2 className="text-3xl font-bold">
-              Dapatkan Diskon 50% untuk Akses Awal!
+              Jadwalkan Demo - Gratis!
             </h2>
             <p className="text-base  text-slate-500">
-            Jangan lewatkan kesempatan emas ini! Bergabunglah dengan Neema sekarang dan nikmati diskon 50% untuk akses awal. Ini adalah peluang langka untuk memanfaatkan semua fitur premium kami dengan biaya yang lebih rendah.
+              Jangan lewatkan kesempatan emas ini! Bergabunglah dengan Neema sekarang dan nikmati diskon 50% untuk akses awal. Ini adalah peluang langka untuk memanfaatkan semua fitur premium kami dengan biaya yang lebih rendah.
             </p>
             <a
               href={whatsappLink + whatsappText}

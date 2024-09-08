@@ -3,10 +3,17 @@ import ManageGearSVG from '../public/svg/manage-gear.svg';
 import ChooseThemeSVG from '../public/svg/choose-theme.svg';
 import CalendarSVG from '../public/svg/calendar.svg';
 import HourSVG from '../public/svg/24hour.svg';
-import CustomWebsiteSVG from '../public/svg/one.svg';
-import AnalyticsReportSVG from '../public/svg/two.svg';
-import TimeSVG from '../public/svg/three.svg';
-import EveryTimeSVG from '../public/svg/four.svg';
+// import CustomWebsiteSVG from '../public/svg/custom-website.svg';
+// import TimeCalendarSVG from '../public/svg/time-calendar.svg';
+// import EverytimeSVG from '../public/svg/everytime.svg';
+// import AnalyticsReportSVG from '../public/svg/analytics.svg';
+import TrendSVG from './app/components/icons/TrendSVG';
+import TimeSavingSVG from './app/components/icons/TimeSavingSVG';
+import CustomerSatisfactionSVG from './app/components/icons/CustomerSatisfactionSVG';
+import CustomWebsiteSVG from './app/components/icons/CustomWebsiteSVG';
+import EverytimeSVG from './app/components/icons/EverytimeSVG';
+import TimeCalendarSVG from './app/components/icons/TimeCalendar';
+import AnalyticsReportSVG from './app/components/icons/AnalyticsReportSVG';
 
 
 export const phoneNumber = '+62859106662562';
@@ -60,38 +67,41 @@ export const FEATURE_SET = [
 
 export const FOR_YOU_CONTENT = [
   {
-    name: "Website dengan Brand Anda Sendiri",
-    description: "Buat bisnis Anda lebih menonjol dengan website profesional yang dapat dikustomisasi untuk reservasi. Tanpa perlu koding, tanpa merek pihak ketiga—hanya bisnis Anda, dengan gaya Anda. Berikan pelanggan Anda pengalaman VIP sejak klik pertama!",
+    name: "Website Pribadi - Tanpa Koding",
+    description: "Buat website profesional yang dapat dikustomisasi untuk reservasi, tanpa perlu koding. Berikan pelanggan pengalaman VIP sejak klik pertama!",
     icon: CustomWebsiteSVG,
   },
   {
     name: "Reservasi 24/7 – Bahkan Saat Anda Sedang Tidur",
-    description: "Jangan pernah melewatkan reservasi lagi! Dengan Neema, pelanggan dapat membuat reservasi kapan saja—tanpa perlu telepon, pesan, atau konfirmasi bolak-balik. Bisnis Anda selalu terbuka untuk reservasi, bahkan saat Anda tidak bekerja. Bayangkan bangun pagi dengan jadwal penuh tanpa perlu usaha ekstra!",
-    icon: EveryTimeSVG,
+    description: "Dengan Neema, pelanggan dapat reservasi kapan saja tanpa telepon atau konfirmasi. Bisnis Anda selalu terbuka, bahkan saat Anda tidur!",
+    icon: EverytimeSVG,
   },
   {
     name: "Pelacakan Reservasi Secara Real-Time",
-    description: "Lelah dengan double booking, janji yang terlewat, atau kesalahan input? Neema memperbarui reservasi Anda secara real-time, memastikan semuanya berjalan lancar. Lacak reservasi, atur jadwal, dan dapatkan pengingat otomatis agar tetap terorganisir dengan mudah.",
-    icon: TimeSVG,
+    description: "Neema memperbarui reservasi real-time, menghindari double booking dan janji yang terlewat. Lacak dan atur jadwal dengan mudah.",
+    icon: TimeCalendarSVG,
   },
   {
     name: "Keputusan Berdasarkan Data dengan Laporan Bulanan",
-    description: "Ingin tahu kapan bisnis Anda paling sibuk? Layanan apa yang paling populer? Analitik Neema memberikan wawasan tentang bisnis Anda, memungkinkan Anda membuat keputusan cerdas yang membantu Anda berkembang.",
+    description: "Analitik Neema membantu Anda memahami bisnis, memberikan wawasan untuk keputusan cerdas dan pertumbuhan yang lebih baik.",
     icon: AnalyticsReportSVG,
   },
 ];
 
 export const WHY_US_CONTENT = [
   {
-    name: 'Meningkatkan Penjualan Anda',
-    desciption: 'Lebih banyak reservasi, lebih sedikit usaha. Pengalaman reservasi Neema yang mulus dan mudah mendorong pelanggan untuk memesan tanpa ragu atau penundaan.',
+    name: 'Tingkatkan Penjualan Anda',
+    description: 'Dapatkan lebih banyak reservasi dengan lebih sedikit usaha. Neema menawarkan pengalaman reservasi yang mendorong pelanggan untuk memesan tanpa ragu atau penundaan.',
+    icon: TrendSVG,
   },
   {
-    name: 'Hemat Waktu, Bebas dari Masalah',
-    desciption: 'Reservasi manual sudah ketinggalan zaman. Otomatiskan seluruh proses reservasi Anda dan luangkan waktu untuk fokus pada hal yang benar-benar penting—memberikan layanan luar biasa.',
+    name: 'Hemat Waktu, Bebas Repot',
+    description: 'Reservasi manual sudah ketinggalan zaman. Otomatiskan seluruh proses reservasi Anda, sehingga Anda bisa fokus pada hal yang benar-benar penting.',
+    icon: TimeSavingSVG,
   },
   {
-    name: 'Meningkatkan Kepuasan Pelanggan',
-    desciption: 'Pelanggan menyukai kenyamanan, dan Neema memberikan itu. Biarkan mereka memesan dengan cepat dan mudah dari website Anda, dengan konfirmasi instan tanpa repot.',
+    name: 'Tingkatkan Kepuasan Pelanggan',
+    description: 'Pelanggan menyukai kenyamanan, dan Neema mewujudkannya. Biarkan mereka melakukan reservasi dengan cepat dan mudah melalui website Anda tanpa repot.',
+    icon: CustomerSatisfactionSVG,
   },
 ];
